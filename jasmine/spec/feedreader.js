@@ -72,6 +72,13 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
 
+        it('changes visibility when menu icon is clicked', function() {
+            $('.menu-icon-link').click();
+            expect($('body').hasClass('menu-hidden')).toBeFalsy();
+
+            $('.menu-icon-link').click();
+            expect($('body').hasClass('menu-hidden')).toBeTruthy();
+        });
 
     /* TODO: Write a new test suite named "Initial Entries" */
 
